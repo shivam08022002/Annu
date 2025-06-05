@@ -9,6 +9,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: './index.html'
+      }
+    }
   },
   resolve: {
     alias: {
@@ -16,5 +21,6 @@ export default defineConfig({
       '@assets': '/src/assets'
     }
   },
-  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.jpeg']
+  assetsInclude: ['**/*.jpg', '**/*.png', '**/*.jpeg'],
+  publicDir: 'public'
 });
