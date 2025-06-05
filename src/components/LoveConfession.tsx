@@ -69,7 +69,7 @@ const LoveConfession = () => {
     top: 0,
     left: 0,
     overflow: 'hidden',
-    background: 'linear-gradient(135deg, rgba(255, 107, 157, 0.9), rgba(165, 9, 234, 0.9), rgba(165, 94, 234, 0.9))',
+    background: 'linear-gradient(135deg, rgba(0, 149, 255, 0.7), rgba(255, 105, 180, 0.3)), url("/src/assets/love.jpg")',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
