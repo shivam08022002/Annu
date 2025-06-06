@@ -345,7 +345,7 @@ const LoveConfession = () => {
             {/* Question */}
             <div>
               <p style={questionStyle}>
-                Do you still love Shivam?
+                Do you still love me?
               </p>
             </div>
 
