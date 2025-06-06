@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import loveImage from '../assets/love.jpg';
 
 const LoveConfession = () => {
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
@@ -69,9 +70,9 @@ const LoveConfession = () => {
     top: 0,
     left: 0,
     overflow: 'hidden',
-    background: 'linear-gradient(135deg, rgba(255, 107, 157, 0.5), rgba(165, 9, 234, 0.5), rgba(165, 94, 234, 0.5)), url(../assets/love.jpg)',
-    backgroundSize: 'cover',
+    background: `linear-gradient(135deg, rgba(255, 107, 157, 0.5), rgba(165, 9, 234, 0.9), rgba(165, 94, 234, 0.2)), url(${loveImage})`,
     backgroundPosition: 'center',
+    backgroundSize: 'cover', // Add this line
     backgroundRepeat: 'no-repeat',
     display: 'flex',
     flexDirection: 'column',
@@ -209,8 +210,9 @@ const LoveConfession = () => {
 
   const successHeartStyle = {
     fontSize: 'clamp(4rem, 12vw, 6rem)',
-    animation: 'spinSlow 3s linear infinite',
-    marginBottom: '2rem'
+    animation: 'heartBeat 1.5s infinite',
+    marginBottom: '2rem',
+    display: 'inline-block'
   };
 
   const glassCardStyle = {
@@ -288,6 +290,14 @@ const LoveConfession = () => {
         @keyframes spinSlow {
           from { transform: rotate(0deg); }
           to { transform: rotate(360deg); }
+        }
+
+        @keyframes heartBeat {
+          0% { transform: scale(1); }
+          25% { transform: scale(1.2); }
+          50% { transform: scale(1); }
+          75% { transform: scale(1.2); }
+          100% { transform: scale(1); }
         }
         
         button:hover {
@@ -380,11 +390,11 @@ const LoveConfession = () => {
 
             <div style={glassCardStyle}>
               <p style={loveMessageStyle}>
-                Love you too, Anamika! 💕
+                Love you more, Anamika! 💕
               </p>
               
               <div style={signatureStyle}>
-                ~ From Shivam with all my love 💕
+               ~ Eternally Yours, Shivam 💗
               </div>
               
               {/* Additional romantic message */}
@@ -400,4 +410,4 @@ const LoveConfession = () => {
   );
 };
 
-export default LoveConfession; 
+export default LoveConfession;
